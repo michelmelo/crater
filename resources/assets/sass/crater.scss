@@ -1,111 +1,115 @@
-// Variables & Functions
-//----------------------------------
+@tailwind base;
 
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import 'variables';
+@tailwind components;
 
-// Plugins
-//----------------------------------
-
-@import "../../../node_modules/bootstrap/scss/bootstrap";
-@import "../../../node_modules/toastr/toastr";
-
-
-// Skins
-//----------------------------------
-
-@import 'skins/skin-crater';
-
-
-// Site Base
-//----------------------------------
-
-@import 'base';
-
-
-// Layouts
-//----------------------------------
-
-@import 'layouts/layout';
-@import 'layouts/crater-sidebar';
-
-
-// Partials
-//----------------------------------
-
-@import 'partials/header';
-@import 'partials/sidebar';
+@tailwind utilities;
 
 
 // Base Components
 //----------------------------------
 
-@import 'components/base/base-date-picker';
-@import 'components/base/base-input';
-@import 'components/base/base-button';
-@import 'components/base/base-popup';
-@import 'components/base/base-text-area';
-@import "components/base/base-switch";
-@import 'components/base/base-loader/index';
-@import 'components/base/base-prefix-input';
-
+@import 'components/v-tooltips.scss';
 
 // Components
 //----------------------------------
 
-@import 'components/buttons';
-@import 'components/forms';
-@import 'components/cards';
-@import 'components/tabs';
-@import 'components/base-tabs';
-@import 'components/tables';
-@import 'components/hamburgers';
-@import 'components/transitions';
-@import 'components/charts';
-@import "components/pace-loader";
-@import "components/vue-tabs";
-@import "components/vue-dropdown";
-@import "components/vue-date-picker";
-@import "components/vue-multi-select";
-@import "components/customer-select";
-@import "components/item-select";
-@import "components/tax-select";
-@import "components/avatar-cropper";
+@import 'components/pace-loader';
+@import 'components/animation';
 
+.swal-icon--custom {
+  height: 80px;
+  width: 80px;
+}
 
-// Modals
-//----------------------------------
+@media (max-width: 768px) {
+  .table-component .sw-dropdown {
+    position: absolute;
+    visibility: visible;
+    top: 15px;
+    right: 10px;
+  }
+}
 
-@import "components/base-modal";
-@import "components/item-modal";
-@import "components/template-modal";
-@import "components/customer-modal";
-@import "components/tax-type-modal";
-@import "components/category-modal";
+.swal2-container .swal2-popup {
+  transition-property: all !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+  transition-delay: 150ms !important;
+  padding: 1.5rem !important;
+}
 
+.swal2-actions {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0.75rem !important;
+  margin-top: 1.5rem !important;
+  width: 100% !important;
+  flex-wrap: nowrap !important;
+  padding: 0 !important;
+}
 
-// Pages
-//----------------------------------
+.swal2-content {
+  text-align: center !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+  color: #6b7280 !important;
+  font-weight: 500 !important;
+  margin-top: 0.5rem !important;
+}
 
-@import 'pages/dashboard';
-@import 'pages/login';
-@import 'pages/login-3';
-@import 'pages/404';
-@import 'pages/customization';
-@import 'pages/settings';
-@import 'pages/invoices/create';
-@import 'pages/invoices/view';
-@import 'pages/invoices/index';
-@import 'pages/estimates/create';
-@import 'pages/estimates/index';
-@import 'pages/estimates/view.scss';
-@import 'pages/expenses';
-@import 'pages/payments';
-@import 'pages/settings.scss';
-@import 'pages/wizard';
-@import 'pages/reports.scss';
-@import 'pages/customers';
-@import 'pages/payments.scss';
-@import 'pages/items.scss';
-@import 'pages/statuses.scss';
+.swal2-icon {
+  height: 3rem !important;
+  width: 3rem !important;
+  border: none !important;
+  margin: 0 !important;
+}
+
+.swal2-header {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.swal2-title {
+  text-align: center !important;
+  margin-top: 0.75 !important;
+  font-weight: 500 !important;
+  color: #111827 !important;
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+  margin-top: 1.25rem;
+}
+
+.swal2-icon.swal2-error {
+  background: #fed7d7 !important;
+  border-radius: 9999px !important;
+}
+
+.swal2-icon.swal2-success {
+  background: #c6f6d5 !important;
+  border-radius: 9999px !important;
+}
+
+.swal2-icon.swal2-warning {
+  background: #feebc8 !important;
+  border-radius: 9999px !important;
+}
+
+.swal2-icon.swal2-info {
+  background: #bee3f8 !important;
+  border-radius: 9999px !important;
+}
+
+.swal2-icon.swal2-question {
+  background: #edf2f7 !important;
+  border-radius: 9999px !important;
+}
+
+.swal2-icon-content {
+    font-size: 2.75em !important;
+}
+
+.swal2-title {
+  margin: 0 !important;
+  margin-top: 1.25rem !important;
+}
